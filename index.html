@@ -90,6 +90,14 @@ Terima kasih udah jadi diri ibub sendiri.`,
       overflow: hidden;
     }
 
+    .scene > :first-child {
+      margin-top: auto
+    }
+
+    .scene > :last-child {
+      margin-bottom: auto
+    }
+
     #stars {
       position: fixed;
       inset: 0;
@@ -129,7 +137,7 @@ Terima kasih udah jadi diri ibub sendiri.`,
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 22px;
       padding: 32px 16px;
       text-align: center;
@@ -531,7 +539,8 @@ Terima kasih udah jadi diri ibub sendiri.`,
       flex-direction: column;
       gap: 28px;
       padding-left: 22px;
-      text-align: left
+      text-align: left;
+      flex-shrink: 0
     }
 
     .timeline::before {
@@ -550,6 +559,7 @@ Terima kasih udah jadi diri ibub sendiri.`,
       border: 1px solid rgba(255, 156, 188, .2);
       border-radius: 18px;
       overflow: hidden;
+      flex-shrink: 0;
       opacity: 0;
       transform: translateY(30px);
       transition: opacity .8s, transform .8s
